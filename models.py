@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime, Date
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime, Date, Float
 from sqlalchemy.orm import declarative_base
 import subprocess
 
@@ -8,11 +8,11 @@ class Student(Base):
     __tablename__ = "Students"
 
     id = Column(Integer, primary_key=True, nullable=False)
-    Name_Surname = Column(String(50), nullable=False, index=True) 
-    gpa = Column(Integer, nullable=True)
+    Name_Surname = Column(String(150), nullable=False, index=True) 
+    gpa = Column(Float, nullable=False)
     age = Column(Integer, nullable=False)
     entry_year = Column(Integer, nullable=False)
-    gender = Column(String(10), nullable=True)
+    gender = Column(String(15), nullable=True)
 
 
 class Study(Base):
