@@ -3,7 +3,7 @@ from sqlalchemy.engine import URL
 from sqlalchemy.orm import sessionmaker
 #import psycopg2
 
-create_flag = True
+create_flag = False
 
 db_user = "postgres"
 db_password = "1234"

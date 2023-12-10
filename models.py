@@ -8,8 +8,8 @@ class Student(Base):
     __tablename__ = "Students"
 
     id = Column(Integer, primary_key=True, nullable=False)
-    Name_Surname = Column(String(50), nullable=False, index=True) # to find faster, EATING RAM
-    gpa = Column(Integer(20), nullable=True)
+    Name_Surname = Column(String(50), nullable=False, index=True) 
+    gpa = Column(Integer, nullable=True)
     age = Column(Integer, nullable=False)
     entry_year = Column(Integer, nullable=False)
     gender = Column(String(10), nullable=True)
