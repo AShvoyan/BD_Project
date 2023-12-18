@@ -18,17 +18,18 @@ class Student(Base):
 class Study(Base):
     __tablename__ = "study"
     
-    id = Column(Integer, ForeignKey("Student.id"), primary_key=True, nullable=False)
+    student_id = Column(Integer, ForeignKey("Student.id"), nullable=False)
+    faculty_id = Column(Integer, ForeignKey("Faculty.id"), nullable=False)
     group_number = Column(Integer, nullable=False)
     scholarship = Column(Integer, nullable=True)
     speciality = Column(String(50), nullable=False)
     course = Column(Date)
     
     
-class Faculcy(Base):
-    __tablename__ = "faculcy"
+class Faculty(Base):
+    __tablename__ = "faculty"
     
-    id = Column(Integer, ForeignKey("Student.id"), primary_key=True, nullable=False)
+    faculty_id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(50), nullable=False)
     decan = Column(String(20), nullable=True)
     capacity = Column(Integer, nullable=True)
