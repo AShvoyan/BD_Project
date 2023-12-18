@@ -19,7 +19,7 @@ class Study(Base):
     __tablename__ = "study"
     
     student_id = Column(Integer, ForeignKey("Student.id"), nullable=False)
-    faculty_id = Column(Integer, ForeignKey("Faculty.id"), nullable=False)
+    faculty_id = Column(Integer, ForeignKey("Faculty.faculty_id"), nullable=False)
     group_number = Column(Integer, nullable=False)
     scholarship = Column(Integer, nullable=True)
     speciality = Column(String(50), nullable=False)
