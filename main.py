@@ -12,7 +12,7 @@ app = FastAPI()
 
 @app.post("/add_student", tags=["student"])
 async def add_student(name_srn_: str, gpa_: float, age_: int,
-                      entry_year_: int, gender_: str = ""):
+                      entry_year_: int, gender_: str):
     obj = models_.Student(Name_Surname=name_srn_, gpa=gpa_, age=age_,
                        entry_year=entry_year_, gender=gender_)
     session_.add(obj)

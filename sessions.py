@@ -9,7 +9,7 @@ db_user = "postgres"
 db_password = "1234"
 db_host = "localhost"
 db_port = "5432"
-db_name = "BD_Project"
+db_name = "db_proj"
 owner_user = "postgres"
 
 if create_flag:
